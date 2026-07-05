@@ -26,66 +26,54 @@ type Group = {
 
 export function getMenuList(): Group[] {
   return [
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "",
+    //       label: "Giao dịch",
+    //       icon: AlignHorizontalDistributeCenter,
+    //       submenus: [
+    //         {
+    //           href: "/principles",
+    //           label: "Principles"
+    //         },
+    //         {
+    //           href: "/strategy",
+    //           label: "Strategy"
+    //         },
+    //         {
+    //           href: "/rsi-indicator",
+    //           label: "RSI Indicator"
+    //         },
+    //         {
+    //           href: "/self-mastery",
+    //           label: "Self Mastery"
+    //         },
+    //         {
+    //           href: "/pnl-report",
+    //           label: "PNL Report"
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // },
     {
       groupLabel: "",
       menus: [
         {
           href: "",
-          label: "Giao dịch",
-          icon: AlignHorizontalDistributeCenter,
-          submenus: [
-            {
-              href: "/principles",
-              label: "Principles"
-            },
-            {
-              href: "/strategy",
-              label: "Strategy"
-            },
-            {
-              href: "/rsi-indicator",
-              label: "RSI Indicator"
-            },
-            {
-              href: "/self-mastery",
-              label: "Self Mastery"
-            },
-            {
-              href: "/pnl-report",
-              label: "PNL Report"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "",
-          label: "Lập trình",
+          label: "Kế toán",
           icon: CodeXml,
           submenus: [
             {
-              href: "/javascript",
-              label: "JavaScript"
+              href: "/reactjs",
+              label: "Kế toán thuế"
             },
             {
               href: "/reactjs",
-              label: "React.js"
+              label: "Kế toán thanh toán"
             },
-            {
-              href: "/solution-mindset",
-              label: "Solution"
-            },
-            {
-              href: "/how-to-debug",
-              label: "How to Debug"
-            },
-            {
-              href: "/git",
-              label: "Git"
-            }
           ]
         }
       ]
