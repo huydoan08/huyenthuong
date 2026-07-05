@@ -1,18 +1,14 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
-import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
-import { onAuthStateChanged } from "firebase/auth";
-import { useRouter } from "next/navigation";
 import { ancientTeaching } from "./data";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function RSIPage() {
   const sidebar = useStore(useSidebar, (x) => x);
-  const router = useRouter();
   const [active, setActive] = useState<number | null>(null);
 
   const images = ancientTeaching.flatMap((item, itemIdx) =>
@@ -20,15 +16,6 @@ export default function RSIPage() {
       .filter((c: any) => c && c.type === "image")
       .map((c: any, i: number) => ({ ...c, title: item.title, _key: `${itemIdx}-${i}` }))
   );
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (!currentUser) {
-        router.push("/");
-      }
-    });
-    return () => unsubscribe();
-  }, [router]);
 
   if (sidebar === undefined) return null;
 

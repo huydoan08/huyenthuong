@@ -67,7 +67,7 @@ export function getMenuList(): Group[] {
           icon: CodeXml,
           submenus: [
             {
-              href: "/reactjs",
+              href: "/javascript",
               label: "Kế toán thuế"
             },
             {
